@@ -1,37 +1,59 @@
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { CirclePlay, Clock8 } from "lucide-react";
+import {
+  CheckLine,
+  CircleDot,
+  CirclePlay,
+  Clock8,
+  SquarePlay,
+} from "lucide-react";
 import Link from "next/link";
 
-const MyClass = () => {
+function VideoClass() {
   return (
-    <div>
+    <div className="">
       <div className="flex w-full flex-col self-stretch items-stretch my-auto max-md:max-w-full max-md:mt-10 px-6">
+        <div className="py-8">
+          <Link href={"/my-class"}>Kembali</Link>
+        </div>
         {/* Header Section */}
         <section className="flex items-stretch text-2xl font-bold mb-8">
           <div className=" space-y-3">
-            <h3 className="text-black">Daftar Kelas</h3>
+            <h3 className="text-black text-3xl">Kelas Brevet Pajak AB</h3>
             <p className="text-zinc-500 text-sm font-bold">
-              Kelola dan pantau progress pembelajaran Anda
+              Pendidikan perpajakan tingkat lanjut
             </p>
           </div>
         </section>
         {/* Data Class */}
         <section className="flex">
           <div className="py-4 w-[70%] space-y-6">
+            <div className="flex gap-36 py-10 px-4">
+              <div>
+                <p className="text-xs text-zinc-400 font-light">Periode</p>
+                <h3>12 Okt - 12 Feb 2025</h3>
+              </div>
+              <div>
+                <p className="text-xs text-zinc-400 font-light">Video Kursus</p>
+                <h3>24 Video</h3>
+              </div>
+              <div>
+                <p className="text-xs text-zinc-400 font-light">Peserta</p>
+                <h3>20 Peserta</h3>
+              </div>
+            </div>
             <div className="border border-zinc-200 rounded-lg  w-full py-4 px-6 space-y-4">
               <h3 className="text-black font-bold text-xl">
                 Video Terakhir Dipelajari
               </h3>
               <div className="w-full py-4 bg-zinc-50 flex gap-2">
                 <div className="w-[20%] px-4 py-3">
-                  <div className="bg-gray-200 py-13 rounded-xl"></div>
+                  <div className="bg-gray-200 py-10 rounded-xl"></div>
                 </div>
-                <div className="w-[50%] px-4 py-3 space-y-4">
+                <div className="w-[53%] px-4 py-3 space-y-4">
                   <h3 className="font-bold">
                     PPN A : Perhitungan PPN Dan Ketentuan Umum Lainnya
                   </h3>
-                  <p className="font-light text-sm">Kelas Brevet Pajak AB</p>
                   <div className="grid grid-cols-2">
                     <div className="flex gap-2">
                       <Clock8 size={18} color="gray" />
@@ -46,7 +68,7 @@ const MyClass = () => {
                     </div>
                   </div>
                 </div>
-                <div className="py-14 px-8">
+                <div className="py-8 px-8">
                   <Link
                     href={"/my-class/video-class"}
                     className="bg-zinc-900 flex gap-3 text-white py-2 px-4 rounded-md"
@@ -58,129 +80,120 @@ const MyClass = () => {
               </div>
             </div>
             <div className="border border-zinc-200 rounded-lg  w-12/12 py-4 px-6 space-y-3">
-              <h3 className="text-black font-bold text-xl">Kelas Anda</h3>
-              <div className="py-4 w-full px-4 border border-zinc-300 rounded-lg ">
-                <div className="flex justify-between">
-                  <div className="space-y-2">
-                    <h3 className="text-black font-bold text-xl">
-                      Kelas Brevet Pajak AB
+              <h3 className="text-black font-bold text-xl">
+                Daftar Video Kursus
+              </h3>
+              <div className="py-4 w-full px-4 border border-zinc-300 flex gap-12 rounded-lg ">
+                <div className="py-3">
+                  <p>1.</p>
+                </div>
+                <div className="py-3">
+                  <CheckLine color="green" />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="font-bold text-base">
+                      PPN A : Perhitungan PPN Dan Ketentuan Umum Lainnya
                     </h3>
-                    <p className="text-zinc-400 font-light text-sm">
-                      Pendidikan perpajakan tingkat lanjut
-                    </p>
                   </div>
-                  <div>
-                    <Badge className="bg-zinc-200">Aktif</Badge>
-                  </div>
-                </div>
-                <div className="flex gap-16 mt-6">
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">Periode</p>
-                    <h3>12 Okt - 12 Feb 2025</h3>
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">
-                      Video Kursus
-                    </p>
-                    <h3>24 Video</h3>
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">Peserta</p>
-                    <h3>20 Peserta</h3>
+                  <div className="flex gap-1">
+                    <div>
+                      <Clock8 size={15} color="gray" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-light text-gray-400">
+                        45 Menit
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="">
-                  <div className="mt-10 flex justify-end">
-                    <Link
-                      href={"/my-class/detail-class"}
-                      className="bg-zinc-900 text-white py-2 px-5 rounded-md w-full text-center"
-                    >
-                      Detail Kelas
-                    </Link>
-                  </div>
-                </div>
+                <Link href={"/my-class/video-class"} className="mt-4 px-10">
+                  <SquarePlay size={40} />
+                </Link>
               </div>
-              <div className="py-4 w-full px-4 border border-zinc-300 rounded-lg ">
-                <div className="flex justify-between">
-                  <div className="space-y-2">
-                    <h3 className="text-black font-bold text-xl">
-                      Kelas Brevet Pajak AB
+              <div className="py-4 w-full px-4 border border-zinc-300 flex gap-12 rounded-lg ">
+                <div className="py-3">
+                  <p>2.</p>
+                </div>
+                <div className="py-3">
+                  <CircleDot color="gray" />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="font-bold text-base text-gray-400">
+                      PPN A : Perhitungan PPN Dan Ketentuan Umum Lainnya
                     </h3>
-                    <p className="text-zinc-400 font-light text-sm">
-                      Pendidikan perpajakan tingkat lanjut
-                    </p>
                   </div>
-                  <div>
-                    <Badge className="bg-zinc-200">Aktif</Badge>
-                  </div>
-                </div>
-                <div className="flex gap-16 mt-6">
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">Periode</p>
-                    <h3>12 Okt - 12 Feb 2025</h3>
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">
-                      Video Kursus
-                    </p>
-                    <h3>24 Video</h3>
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">Peserta</p>
-                    <h3>20 Peserta</h3>
+                  <div className="flex gap-1">
+                    <div>
+                      <Clock8 size={15} color="gray" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-light text-gray-400">
+                        45 Menit
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="">
-                  <div className="mt-10 flex justify-end">
-                    <Link
-                      href={"/my-class/detail-class"}
-                      className="bg-zinc-900 text-white py-2 px-5 rounded-md w-full text-center"
-                    >
-                      Detail Kelas
-                    </Link>
-                  </div>
-                </div>
+                <Link href={"/my-class/video-class"} className="mt-4 px-10">
+                  <SquarePlay size={40} color="gray" />
+                </Link>
               </div>
-              <div className="py-4 w-full px-4 border border-zinc-300 rounded-lg ">
-                <div className="flex justify-between">
-                  <div className="space-y-2">
-                    <h3 className="text-black font-bold text-xl">
-                      Kelas Brevet Pajak AB
+              <div className="py-4 w-full px-4 border border-zinc-300 flex gap-12 rounded-lg ">
+                <div className="py-3">
+                  <p>3.</p>
+                </div>
+                <div className="py-3">
+                  <CircleDot color="gray" />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="font-bold text-base text-gray-400">
+                      PPN A : Perhitungan PPN Dan Ketentuan Umum Lainnya
                     </h3>
-                    <p className="text-zinc-400 font-light text-sm">
-                      Pendidikan perpajakan tingkat lanjut
-                    </p>
                   </div>
-                  <div>
-                    <Badge className="bg-zinc-200">Aktif</Badge>
-                  </div>
-                </div>
-                <div className="flex gap-16 mt-6">
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">Periode</p>
-                    <h3>12 Okt - 12 Feb 2025</h3>
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">
-                      Video Kursus
-                    </p>
-                    <h3>24 Video</h3>
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-400 font-light">Peserta</p>
-                    <h3>20 Peserta</h3>
+                  <div className="flex gap-1">
+                    <div>
+                      <Clock8 size={15} color="gray" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-light text-gray-400">
+                        45 Menit
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="">
-                  <div className="mt-10 flex justify-end">
-                    <Link
-                      href={"/my-class/detail-class"}
-                      className="bg-zinc-900 text-white py-2 px-5 rounded-md w-full text-center"
-                    >
-                      Detail Kelas
-                    </Link>
+                <Link href={"/my-class/video-class"} className="mt-4 px-10">
+                  <SquarePlay size={40} color="gray" />
+                </Link>
+              </div>
+              <div className="py-4 w-full px-4 border border-zinc-300 flex gap-12 rounded-lg ">
+                <div className="py-3">
+                  <p>4.</p>
+                </div>
+                <div className="py-3">
+                  <CircleDot color="gray" />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="font-bold text-base text-gray-400">
+                      PPN A : Perhitungan PPN Dan Ketentuan Umum Lainnya
+                    </h3>
+                  </div>
+                  <div className="flex gap-1">
+                    <div>
+                      <Clock8 size={15} color="gray" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-light text-gray-400">
+                        45 Menit
+                      </p>
+                    </div>
                   </div>
                 </div>
+                <Link href={"/my-class/video-class"} className="mt-4 px-10">
+                  <SquarePlay size={40} color="gray" />
+                </Link>
               </div>
             </div>
           </div>
@@ -279,6 +292,6 @@ const MyClass = () => {
       </div>
     </div>
   );
-};
+}
 
-export default MyClass;
+export default VideoClass;
