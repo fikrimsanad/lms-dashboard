@@ -145,33 +145,15 @@ function VideoClass() {
       </div>
       <div className="py-5 px-5">
         <div className="grid grid-cols-3">
-          <div className="col-span-2 px-8">
+          <div className="col-span-2 px-4">
             <Tabs defaultValue="Class-Activity" className="w-full">
-              <TabsList className="w-full flex justify-start py-9 gap-2 rounded-lg">
-                <TabsTrigger
-                  value="Class-Activity"
-                  className="py-5 px-6 rounded-lg"
-                >
+              <TabsList>
+                <TabsTrigger value="Class-Activity">
                   Informasi Kelas
                 </TabsTrigger>
-                <TabsTrigger
-                  value="Class-Schedule"
-                  className="py-5 px-6 rounded-lg"
-                >
-                  Diskusi
-                </TabsTrigger>
-                <TabsTrigger
-                  value="Class-Discussion"
-                  className="py-5 px-6 rounded-lg"
-                >
-                  Review Kelas
-                </TabsTrigger>
-                <TabsTrigger
-                  value="Class-Materials"
-                  className="py-5 px-6 rounded-lg"
-                >
-                  Bahan Belajar
-                </TabsTrigger>
+                <TabsTrigger value="Class-Schedule">Diskusi</TabsTrigger>
+                <TabsTrigger value="Class-Discussion">Review Kelas</TabsTrigger>
+                <TabsTrigger value="Class-Materials">Bahan Belajar</TabsTrigger>
               </TabsList>
               <TabsContent value="Class-Activity">a</TabsContent>
               <TabsContent value="Class-Schedule">B</TabsContent>
